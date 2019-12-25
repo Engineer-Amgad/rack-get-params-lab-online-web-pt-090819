@@ -28,6 +28,7 @@ class Application
       if @@items.include?(add_item)
         # binding.pry
         @@cart << add_item
+        @@cart
       else
         resp.write "We don't have that item"
       end 
