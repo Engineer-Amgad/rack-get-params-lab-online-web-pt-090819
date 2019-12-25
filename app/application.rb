@@ -28,7 +28,10 @@ class Application
       if @@items.include?(add_item)
         # binding.pry
         @@cart << add_item
-        @@cart
+        @@cart.each do |item|
+          resp.write "#{item}\n"
+        end
+        
       else
         resp.write "We don't have that item"
       end 
