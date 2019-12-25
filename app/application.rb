@@ -28,13 +28,12 @@ class Application
       
       if @@items.include?(add_item)
         @@cart << add_item
-        # @@cart.each do |item|
-        #   resp.write "#{item}\n"
-        # end
         resp.write "added Figs"
+        
       else
         resp.write "We don't have that item"
       end 
+      
     else
       resp.write "Path Not Found"
     end
